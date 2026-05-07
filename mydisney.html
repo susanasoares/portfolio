@@ -115,6 +115,21 @@
     footer a { font-size: 0.75rem; color: var(--muted); transition: color 0.15s; }
     footer a:hover { color: var(--text); }
   </style>
+
+  <script>
+    (function() {
+      const correct = 'susana2026';
+      const key = 'cs_auth';
+      if (sessionStorage.getItem(key) !== correct) {
+        const input = prompt('This page is password protected.\nEnter password to continue:');
+        if (input !== correct) {
+          document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:DM Sans,sans-serif;color:#191B26;font-size:0.9rem;">Incorrect password. <a href=\"index.html\" style=\"margin-left:0.5rem;text-decoration:underline;\">Go back</a></div>';
+          return;
+        }
+        sessionStorage.setItem(key, correct);
+      }
+    })();
+  </script>
 </head>
 <body>
 
