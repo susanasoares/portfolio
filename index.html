@@ -140,9 +140,11 @@
     .animate:nth-child(5) { animation-delay: 320ms; }
     @media (max-width: 960px) { .quality-grid { grid-template-columns: repeat(3,1fr); } .timeline { grid-template-columns: 1fr; } .about-section { grid-template-columns: 1fr; } }
     @media (max-width: 768px) { .quality-grid { grid-template-columns: repeat(2,1fr); } .work-grid { grid-template-columns: 1fr; } nav { padding: 0 var(--space-sm); } section { padding: var(--space-2xl) var(--space-sm); } #hero { padding-top: 100px; } }
+
   </style>
 </head>
 <body>
+
 
   <nav>
     <span class="nav-logo">Susana Soares <span style="font-weight:var(--weight-normal); opacity:0.55; margin-left:2px;">Product Design Leader</span></span>
@@ -473,5 +475,6 @@
     }, { threshold: 0.3 });
     sections.forEach(section => scrollObserver.observe(section));
   </script>
+
 </body>
 </html>
